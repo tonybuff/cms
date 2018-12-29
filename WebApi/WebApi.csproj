@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\static\css\app.15af16579ee359e21f98aca7b76004a5.css" />
+    <None Include="wwwroot\static\css\app.15af16579ee359e21f98aca7b76004a5.css.map" />
+    <None Include="wwwroot\static\css\app.7bbbf2ec74c2f9d1339a4f835b057971.css.map" />
+    <None Include="wwwroot\static\css\app.c5a7ca43f7fab4e3a1737f2e26d9b677.css.map" />
+    <None Include="wwwroot\static\css\app.ec5d08ed59212cc7ff6872d6e4e7f1e1.css.map" />
+    <None Include="wwwroot\static\css\reset.css" />
+    <None Include="wwwroot\static\js\app.0308823513ed613eb3a2.js" />
+    <None Include="wwwroot\static\js\app.0308823513ed613eb3a2.js.map" />
+    <None Include="wwwroot\static\js\app.a273b4c5e4f3d1e492df.js" />
+    <None Include="wwwroot\static\js\app.a273b4c5e4f3d1e492df.js.map" />
+    <None Include="wwwroot\static\js\app.b2a640baeddd01abb950.js" />
+    <None Include="wwwroot\static\js\app.b2a640baeddd01abb950.js.map" />
+    <None Include="wwwroot\static\js\app.c5ca48f2715b4568d5a1.js" />
+    <None Include="wwwroot\static\js\app.c5ca48f2715b4568d5a1.js.map" />
+    <None Include="wwwroot\static\js\manifest.2ae2e69a05c33dfc65f8.js" />
+    <None Include="wwwroot\static\js\manifest.2ae2e69a05c33dfc65f8.js.map" />
+    <None Include="wwwroot\static\js\vendor.51c8a04ed2a2da003380.js" />
+    <None Include="wwwroot\static\js\vendor.51c8a04ed2a2da003380.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.513" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+</Project>

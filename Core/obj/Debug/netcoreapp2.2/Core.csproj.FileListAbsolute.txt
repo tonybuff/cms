@@ -1,0 +1,14 @@
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.deps.json
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.runtimeconfig.json
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.runtimeconfig.dev.json
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.dll
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.pdb
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Models.dll
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Models.pdb
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.csprojAssemblyReference.cache
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.csproj.CoreCompileInputs.cache
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfoInputs.cache
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfo.cs
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.csproj.CopyComplete
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.dll
+D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.pdb
