@@ -12,7 +12,7 @@ namespace Core.Mapping
         public void Configure(EntityTypeBuilder<Users> builder)
         {
             builder.HasKey(f => f.Id);
-            builder.HasOne(f => f.Role).WithMany(f=>f.UserList).HasForeignKey(f=>f.RoleId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(f => f.UserRoles).WithMany(f=>f.Users).HasForeignKey(f=>f.RoleId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

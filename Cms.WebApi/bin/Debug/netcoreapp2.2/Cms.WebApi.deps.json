@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "066d42c8041e977334bb41a642fe9c96db9495c5"
+    "signature": "aad158db2d65162eca79a949394c043798b41bb1"
   },
   "compilationOptions": {
     "defines": [
@@ -24,9 +24,15 @@
     ".NETCoreApp,Version=v2.2": {
       "Cms.WebApi/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
+          "AutoMapper": "8.0.0",
+          "Autofac": "4.8.1",
+          "Autofac.Extensions.DependencyInjection": "4.3.1",
+          "Core.Common": "1.0.0",
+          "Core.Service": "1.0.0",
+          "Core.Service.Models": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.Extensions.Identity.Core": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.1916590"
         },
@@ -35,6 +41,51 @@
         },
         "compile": {
           "Cms.WebApi.dll": {}
+        }
+      },
+      "Autofac/4.8.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {
+            "assemblyVersion": "4.8.1.0",
+            "fileVersion": "4.8.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.3.1": {
+        "dependencies": {
+          "Autofac": "4.8.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "4.3.1.0",
+            "fileVersion": "4.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "AutoMapper/8.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "Castle.Core/4.2.1": {
@@ -304,6 +355,7 @@
       "Core/1.0.0": {
         "dependencies": {
           "Core.Models": "1.0.0",
+          "Core.Service.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
@@ -315,12 +367,60 @@
           "Core.dll": {}
         }
       },
+      "Core.Common/1.0.0": {
+        "runtime": {
+          "Core.Common.dll": {}
+        },
+        "compile": {
+          "Core.Common.dll": {}
+        }
+      },
       "Core.Models/1.0.0": {
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
         "runtime": {
           "Core.Models.dll": {}
         },
         "compile": {
           "Core.Models.dll": {}
+        }
+      },
+      "Core.Repository/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0",
+          "Core.Models": "1.0.0"
+        },
+        "runtime": {
+          "Core.Repository.dll": {}
+        },
+        "compile": {
+          "Core.Repository.dll": {}
+        }
+      },
+      "Core.Service/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Core.Models": "1.0.0",
+          "Core.Repository": "1.0.0",
+          "Core.Service.Models": "1.0.0"
+        },
+        "runtime": {
+          "Core.Service.dll": {}
+        },
+        "compile": {
+          "Core.Service.dll": {}
+        }
+      },
+      "Core.Service.Models/1.0.0": {
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
+        "runtime": {
+          "Core.Service.Models.dll": {}
+        },
+        "compile": {
+          "Core.Service.Models.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3344,6 +3444,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Autofac/4.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aIT9rupCOdab5RMfxvWTBmOxGU77tLqmvSF4V89SzV6oQcJrtuKw/Xp55xy9EijSktbMka55SbroAPOyT+lziw==",
+      "path": "autofac/4.8.1",
+      "hashPath": "autofac.4.8.1.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vWa3PzmRA7m+Az5oqfu7tKDdMnS8wkVvYX04640y177gBWrP74gEzJ9rbqtRzVO0IPAxHAKvHS6LBSaDR66u8Q==",
+      "path": "autofac.extensions.dependencyinjection/4.3.1",
+      "hashPath": "autofac.extensions.dependencyinjection.4.3.1.nupkg.sha512"
+    },
+    "AutoMapper/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+      "path": "automapper/8.0.0",
+      "hashPath": "automapper.8.0.0.nupkg.sha512"
+    },
     "Castle.Core/4.2.1": {
       "type": "package",
       "serviceable": true,
@@ -3447,7 +3568,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Core.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Core.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Core.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Core.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Core.Service.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

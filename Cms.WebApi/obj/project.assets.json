@@ -2,6 +2,45 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "Autofac/4.8.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.6.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "AutoMapper/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
       "Castle.Core/4.2.1": {
         "type": "package",
         "dependencies": {
@@ -4564,6 +4603,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Core.Models": "1.0.0",
+          "Core.Service.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
@@ -4575,19 +4615,120 @@
           "bin/placeholder/Core.dll": {}
         }
       },
+      "Core.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Core.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Common.dll": {}
+        }
+      },
       "Core.Models/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Core.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/Core.Models.dll": {}
         }
+      },
+      "Core.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Core": "1.0.0",
+          "Core.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Repository.dll": {}
+        }
+      },
+      "Core.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Core.Models": "1.0.0",
+          "Core.Repository": "1.0.0",
+          "Core.Service.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Service.dll": {}
+        }
+      },
+      "Core.Service.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Service.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Service.Models.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/4.8.1": {
+      "sha512": "aIT9rupCOdab5RMfxvWTBmOxGU77tLqmvSF4V89SzV6oQcJrtuKw/Xp55xy9EijSktbMka55SbroAPOyT+lziw==",
+      "type": "package",
+      "path": "autofac/4.8.1",
+      "files": [
+        "autofac.4.8.1.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/4.3.1": {
+      "sha512": "vWa3PzmRA7m+Az5oqfu7tKDdMnS8wkVvYX04640y177gBWrP74gEzJ9rbqtRzVO0IPAxHAKvHS6LBSaDR66u8Q==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/4.3.1",
+      "files": [
+        ".signature.p7s",
+        "autofac.extensions.dependencyinjection.4.3.1.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
+    "AutoMapper/8.0.0": {
+      "sha512": "kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+      "type": "package",
+      "path": "automapper/8.0.0",
+      "files": [
+        ".signature.p7s",
+        "automapper.8.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.pdb",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "Castle.Core/4.2.1": {
       "sha512": "tLlM4XU+aj0n8TdkiHHmV/48GpTuFEPQimFjHTZGD9XTWRCSLQcnB6rOftqaUSCXeBSbmWWEGeLPTLG3siTrcw==",
       "type": "package",
@@ -12351,17 +12492,43 @@
       "path": "../Core/Core.csproj",
       "msbuildProject": "../Core/Core.csproj"
     },
+    "Core.Common/1.0.0": {
+      "type": "project",
+      "path": "../Core.Common/Core.Common.csproj",
+      "msbuildProject": "../Core.Common/Core.Common.csproj"
+    },
     "Core.Models/1.0.0": {
       "type": "project",
       "path": "../Core.Models/Core.Models.csproj",
       "msbuildProject": "../Core.Models/Core.Models.csproj"
+    },
+    "Core.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Core.Repository/Core.Repository.csproj",
+      "msbuildProject": "../Core.Repository/Core.Repository.csproj"
+    },
+    "Core.Service/1.0.0": {
+      "type": "project",
+      "path": "../Core.Service/Core.Service.csproj",
+      "msbuildProject": "../Core.Service/Core.Service.csproj"
+    },
+    "Core.Service.Models/1.0.0": {
+      "type": "project",
+      "path": "../Core.Service.Models/Core.Service.Models.csproj",
+      "msbuildProject": "../Core.Service.Models/Core.Service.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Core >= 1.0.0",
+      "AutoMapper >= 8.0.0",
+      "Autofac >= 4.8.1",
+      "Autofac.Extensions.DependencyInjection >= 4.3.1",
+      "Core.Common >= 1.0.0",
+      "Core.Service >= 1.0.0",
+      "Core.Service.Models >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 2.2.0",
+      "Microsoft.Extensions.Identity.Core >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.0.1916590"
     ]
@@ -12396,8 +12563,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\练习\\Solution\\Core\\Core.csproj": {
-              "projectPath": "D:\\练习\\Solution\\Core\\Core.csproj"
+            "D:\\练习\\Solution\\Core.Common\\Core.Common.csproj": {
+              "projectPath": "D:\\练习\\Solution\\Core.Common\\Core.Common.csproj"
+            },
+            "D:\\练习\\Solution\\Core.Service.Models\\Core.Service.Models.csproj": {
+              "projectPath": "D:\\练习\\Solution\\Core.Service.Models\\Core.Service.Models.csproj"
+            },
+            "D:\\练习\\Solution\\Core.Service\\Core.Service.csproj": {
+              "projectPath": "D:\\练习\\Solution\\Core.Service\\Core.Service.csproj"
             }
           }
         }
@@ -12411,6 +12584,18 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Autofac": {
+            "target": "Package",
+            "version": "[4.8.1, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[4.3.1, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12418,6 +12603,10 @@
             "autoReferenced": true
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.Identity.Core": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

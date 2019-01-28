@@ -6,3 +6,4 @@ D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.1\Core.Models.AssemblyInfoI
 D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.1\Core.Models.AssemblyInfo.cs
 D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.1\Core.Models.dll
 D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.1\Core.Models.pdb
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.1\Core.Models.csprojAssemblyReference.cache

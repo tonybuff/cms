@@ -12,3 +12,7 @@ D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfo.cs
 D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.csproj.CopyComplete
 D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.dll
 D:\练习\Solution\Core\obj\Debug\netcoreapp2.2\Core.pdb
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Common.dll
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Common.pdb
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Service.Models.dll
+D:\练习\Solution\Core\bin\Debug\netcoreapp2.2\Core.Service.Models.pdb

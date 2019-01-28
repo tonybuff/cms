@@ -17,3 +17,11 @@ D:\练习\Solution\Cms.WebApi\obj\Debug\netcoreapp2.2\Cms.WebApi.csproj.CopyComp
 D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Cms.WebApi.pdb
 D:\练习\Solution\Cms.WebApi\obj\Debug\netcoreapp2.2\Cms.WebApi.dll
 D:\练习\Solution\Cms.WebApi\obj\Debug\netcoreapp2.2\Cms.WebApi.pdb
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Repository.dll
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Service.dll
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Service.Models.dll
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Service.Models.pdb
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Service.pdb
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Repository.pdb
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Common.dll
+D:\练习\Solution\Cms.WebApi\bin\Debug\netcoreapp2.2\Core.Common.pdb

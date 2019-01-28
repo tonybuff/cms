@@ -4,26 +4,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Core.DbContext;
+using Core.Service;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cms.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ValuesController : ControllerBase
     {
-        private CMSDbContext _dbcontext;
+        private readonly IUserService _userService;
 
-        public ValuesController(CMSDbContext dbcontext)
+        public ValuesController(IUserService userService)
         {
-            _dbcontext = dbcontext;
+            _userService = userService;
         }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-           var userList = _dbcontext.Users;
-           var rolsList = _dbcontext.Roles.ToAsyncEnumerable();
-           return new string[] { "value1", "value2" };
+            int total = 0;
+            var list = _userService.GetPageList(out total);
+            
+            return new string[] { "value1", "value2" , Newtonsoft.Json.JsonConvert.SerializeObject(list) };
         }
 
         // GET api/values/5
@@ -34,7 +39,7 @@ namespace Cms.WebApi.Controllers
         }
 
         // POST api/values
-        [HttpPost]
+        [HttpPost] 
         public void Post([FromBody] string value)
         {
         }

@@ -1292,14 +1292,40 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "Core.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Core.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Common.dll": {}
+        }
+      },
       "Core.Models/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Core.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/Core.Models.dll": {}
+        }
+      },
+      "Core.Service.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Core.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Service.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Service.Models.dll": {}
         }
       }
     }
@@ -4855,15 +4881,26 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "Core.Common/1.0.0": {
+      "type": "project",
+      "path": "../Core.Common/Core.Common.csproj",
+      "msbuildProject": "../Core.Common/Core.Common.csproj"
+    },
     "Core.Models/1.0.0": {
       "type": "project",
       "path": "../Core.Models/Core.Models.csproj",
       "msbuildProject": "../Core.Models/Core.Models.csproj"
+    },
+    "Core.Service.Models/1.0.0": {
+      "type": "project",
+      "path": "../Core.Service.Models/Core.Service.Models.csproj",
+      "msbuildProject": "../Core.Service.Models/Core.Service.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Core.Models >= 1.0.0",
+      "Core.Service.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Proxies >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.0",
@@ -4903,6 +4940,9 @@
           "projectReferences": {
             "D:\\练习\\Solution\\Core.Models\\Core.Models.csproj": {
               "projectPath": "D:\\练习\\Solution\\Core.Models\\Core.Models.csproj"
+            },
+            "D:\\练习\\Solution\\Core.Service.Models\\Core.Service.Models.csproj": {
+              "projectPath": "D:\\练习\\Solution\\Core.Service.Models\\Core.Service.Models.csproj"
             }
           }
         }
