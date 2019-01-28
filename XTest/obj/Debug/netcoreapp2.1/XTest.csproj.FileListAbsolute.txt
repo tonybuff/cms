@@ -1,0 +1,14 @@
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\XTest.deps.json
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\XTest.runtimeconfig.json
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\XTest.runtimeconfig.dev.json
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\XTest.dll
+D:\练习\Solution\XTest\bin\Debug\netcoreapp2.1\XTest.pdb
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.csprojAssemblyReference.cache
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.csproj.CoreCompileInputs.cache
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.AssemblyInfoInputs.cache
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.AssemblyInfo.cs
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.dll
+D:\练习\Solution\XTest\obj\Debug\netcoreapp2.1\XTest.pdb

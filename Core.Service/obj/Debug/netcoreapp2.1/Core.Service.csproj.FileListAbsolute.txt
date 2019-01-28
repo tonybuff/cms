@@ -1,0 +1,6 @@
+D:\练习\Solution\Core.Service\bin\Debug\netcoreapp2.1\Core.Service.deps.json
+D:\练习\Solution\Core.Service\bin\Debug\netcoreapp2.1\Core.Service.dll
+D:\练习\Solution\Core.Service\obj\Debug\netcoreapp2.1\Core.Service.csprojAssemblyReference.cache
+D:\练习\Solution\Core.Service\obj\Debug\netcoreapp2.1\Core.Service.csproj.CoreCompileInputs.cache
+D:\练习\Solution\Core.Service\obj\Debug\netcoreapp2.1\Core.Service.AssemblyInfoInputs.cache
+D:\练习\Solution\Core.Service\obj\Debug\netcoreapp2.1\Core.Service.AssemblyInfo.cs

@@ -1,0 +1,12 @@
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.csprojAssemblyReference.cache
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.csproj.CoreCompileInputs.cache
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.AssemblyInfoInputs.cache
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.AssemblyInfo.cs
+D:\练习\Solution\Core.Models\bin\Debug\netcoreapp2.2\Core.Models.deps.json
+D:\练习\Solution\Core.Models\bin\Debug\netcoreapp2.2\Core.Models.dll
+D:\练习\Solution\Core.Models\bin\Debug\netcoreapp2.2\Core.Models.pdb
+D:\练习\Solution\Core.Models\bin\Debug\netcoreapp2.2\Core.Common.dll
+D:\练习\Solution\Core.Models\bin\Debug\netcoreapp2.2\Core.Common.pdb
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.csproj.CopyComplete
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.dll
+D:\练习\Solution\Core.Models\obj\Debug\netcoreapp2.2\Core.Models.pdb
