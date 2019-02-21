@@ -27,17 +27,19 @@ namespace Core.Models
         [Column(TypeName = "nvarchar(255)", Order = 100)]
         public string Avatar { get; set; }
 
-        public int IsLocked { get; set; }
+        public IsLocked IsLocked { get; set; }
 
         //[EnumDataType(typeof(UserStatus))]
         public UserStateEnums Status { get; set; }
 
-        public int IsDeleted { get; set; }
+        public UserType UserType { get; set; }
+
+        public IsDeleted IsDeleted { get; set; }
         
         /// <summary>
         /// 创建者ID
         /// </summary>
-        public Guid CreatedByUserGuid { get; set; }
+        public Guid? CreatedByUserGuid { get; set; }
         /// <summary>
         /// 创建者姓名
         /// </summary>
@@ -62,8 +64,12 @@ namespace Core.Models
         /// </summary>
         public Guid? RoleId { get; set; }
         /// <summary>
-        /// 用户的角色集合
+        /// 用户的角色
         /// </summary>
         public virtual Roles UserRoles { get; set; }
+
+        public virtual Users CreateUser { get; set; }
+
+        public virtual Users ModifiedUser { get; set; }
     }
 }

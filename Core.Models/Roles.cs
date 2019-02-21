@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Common.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -30,11 +31,12 @@ namespace Core.Models
         /// <summary>
         /// 
         /// </summary>
-        public int Status { get; set; }
+        public Status Status { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int IsDeleted { get; set; }
+        public IsDeleted IsDeleted { get; set; }
+
         /// <summary>
         /// 创建时间
         /// </summary>
@@ -42,7 +44,7 @@ namespace Core.Models
         /// <summary>
         /// 创建者ID
         /// </summary>
-        public Guid CreatedByUserGuid { get; set; }
+        public Guid? CreatedByUserGuid { get; set; }
         /// <summary>
         /// 创建者姓名
         /// </summary>
@@ -76,5 +78,9 @@ namespace Core.Models
         /// 角色拥有的权限集合
         /// </summary>
         public virtual ICollection<RolePermission> RolePermissions { get; set; }
+
+        public virtual Users CreateUser { get; set; }
+
+        public virtual Users ModifiedUser { get; set; }
     }
 }

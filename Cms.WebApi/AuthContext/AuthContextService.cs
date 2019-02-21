@@ -61,7 +61,7 @@ namespace Cms.WebApi.AuthContext
         {
             get
             {
-                return Convert.ToBoolean(Current.User.FindFirstValue("IsAdministrator"));
+                return Convert.ToBoolean(Current.User.FindFirstValue("IsSuperAdministrator"));
             }
         }
     }

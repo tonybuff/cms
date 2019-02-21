@@ -6,6 +6,12 @@ namespace Core.Models
 {
     public abstract class BaseEntity<T>
     {
+        public BaseEntity()
+        {
+            CreateDate = UpdateDate = DateTime.Now;
+
+        }
+
         [Key]
         public T Id { get; set; }
 

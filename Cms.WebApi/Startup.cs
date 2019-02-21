@@ -62,9 +62,10 @@ namespace Cms.WebApi
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
             services.AddDbContext<CMSDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            //services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<IUserRepository, UserRepository>();
+            services.Configure<ApiBehaviorOptions>(options => {
+                //是否启用自定义模型验证，如果为false则ModelState在action进入之前就验证了
+                options.SuppressModelStateInvalidFilter = true;
+            });
 
             Mappings.RegisterMappings();
 
@@ -92,10 +93,9 @@ namespace Cms.WebApi
             builder.Populate(services);
             this.ApplicationContainer = builder.Build();
             #endregion
+
             return new AutofacServiceProvider(this.ApplicationContainer);
-        }
-
-
+        } 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -114,6 +114,7 @@ namespace Cms.WebApi
             app.UseAuthentication();
             app.UseCors("*");
             app.UseMvc();
+            
         }
     }
 }

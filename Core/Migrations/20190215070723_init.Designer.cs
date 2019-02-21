@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Core.Migrations
 {
     [DbContext(typeof(CMSDbContext))]
-    [Migration("20190121055226_init")]
+    [Migration("20190215070723_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,48 @@ namespace Core.Migrations
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Core.Models.Icons", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Color")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate");
+
+                    b.Property<Guid>("CreatedByUserGuid");
+
+                    b.Property<string>("CreatedByUserName");
+
+                    b.Property<string>("Custom")
+                        .HasColumnType("nvarchar(60)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IsDeleted");
+
+                    b.Property<Guid?>("ModifiedByUserGuid");
+
+                    b.Property<string>("ModifiedByUserName");
+
+                    b.Property<string>("Size")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Status");
+
+                    b.Property<DateTime>("UpdateDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Icons");
+                });
 
             modelBuilder.Entity("Core.Models.Menus", b =>
                 {
@@ -191,7 +233,7 @@ namespace Core.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<Guid>("CreatedByUserGuid");
+                    b.Property<Guid?>("CreatedByUserGuid");
 
                     b.Property<string>("CreatedByUserName");
 
@@ -222,7 +264,17 @@ namespace Core.Migrations
 
                     b.Property<DateTime>("UpdateDate");
 
+                    b.Property<int>("UserType");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedByUserGuid")
+                        .IsUnique()
+                        .HasFilter("[CreatedByUserGuid] IS NOT NULL");
+
+                    b.HasIndex("ModifiedByUserGuid")
+                        .IsUnique()
+                        .HasFilter("[ModifiedByUserGuid] IS NOT NULL");
 
                     b.HasIndex("RoleId");
 
@@ -252,6 +304,16 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.Models.Users", b =>
                 {
+                    b.HasOne("Core.Models.Users", "CreateUser")
+                        .WithOne()
+                        .HasForeignKey("Core.Models.Users", "CreatedByUserGuid")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Core.Models.Users", "ModifiedUser")
+                        .WithOne()
+                        .HasForeignKey("Core.Models.Users", "ModifiedByUserGuid")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("Core.Models.Roles", "UserRoles")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")

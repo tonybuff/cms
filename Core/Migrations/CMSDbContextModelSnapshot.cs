@@ -231,7 +231,7 @@ namespace Core.Migrations
 
                     b.Property<DateTime>("CreateDate");
 
-                    b.Property<Guid>("CreatedByUserGuid");
+                    b.Property<Guid?>("CreatedByUserGuid");
 
                     b.Property<string>("CreatedByUserName");
 
@@ -262,7 +262,17 @@ namespace Core.Migrations
 
                     b.Property<DateTime>("UpdateDate");
 
+                    b.Property<int>("UserType");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedByUserGuid")
+                        .IsUnique()
+                        .HasFilter("[CreatedByUserGuid] IS NOT NULL");
+
+                    b.HasIndex("ModifiedByUserGuid")
+                        .IsUnique()
+                        .HasFilter("[ModifiedByUserGuid] IS NOT NULL");
 
                     b.HasIndex("RoleId");
 
@@ -292,6 +302,16 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.Models.Users", b =>
                 {
+                    b.HasOne("Core.Models.Users", "CreateUser")
+                        .WithOne()
+                        .HasForeignKey("Core.Models.Users", "CreatedByUserGuid")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Core.Models.Users", "ModifiedUser")
+                        .WithOne()
+                        .HasForeignKey("Core.Models.Users", "ModifiedByUserGuid")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("Core.Models.Roles", "UserRoles")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
